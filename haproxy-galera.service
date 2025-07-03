@@ -1,0 +1,12 @@
+[Unit]
+Description=MariaDB Galera health check script for HAProxy
+After=network.target
+
+[Service]
+ExecStart=/usr/local/sbin/haproxy-galera
+User=mysql
+Group=mysql
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
